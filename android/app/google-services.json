@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "511047669027",
+    "project_id": "mimo-reminder",
+    "storage_bucket": "mimo-reminder.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:511047669027:android:83f90f4e3065b93000e896",
+        "android_client_info": {
+          "package_name": "com.dfine.mimo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrd-dlt_F4sjEDJkydxHFn6h1VVvzeeQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
