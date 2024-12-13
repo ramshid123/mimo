@@ -1,8 +1,6 @@
-import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:mimo/core/theme/palette.dart';
@@ -18,7 +16,7 @@ class EditProfilePageWidgets {
     return Builder(
       builder: (context) {
         return Padding(
-          padding: EdgeInsets.symmetric(vertical: 10),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -87,7 +85,7 @@ class EditProfilePageWidgets {
         ), // Set your desired color
       ),
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(vertical: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -101,7 +99,7 @@ class EditProfilePageWidgets {
               onTap: () async =>
                   await _showCalendar(context: context, dob: dob),
               child: Container(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: ColorConstants.blue.withOpacity(0.2),

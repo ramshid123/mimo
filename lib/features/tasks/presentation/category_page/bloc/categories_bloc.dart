@@ -3,10 +3,8 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mimo/core/entity/category_entity.dart';
-import 'package:mimo/core/entity/user_entity.dart';
 import 'package:mimo/features/tasks/domain/use%20cases/create_category.dart';
 import 'package:mimo/features/tasks/domain/use%20cases/get_categories.dart';
-import 'package:mimo/features/tasks/domain/use%20cases/get_tasks_count.dart';
 part 'categories_event.dart';
 part 'categories_state.dart';
 
@@ -21,7 +19,7 @@ class CategoriesBloc extends Bloc<CategoriesEvent, CategoriesState> {
         _useCaseGetCategories = useCaseGetCategories,
         super(CategoriesInitial()) {
     on<CategoriesEvent>((event, emit) {
-      // TODO: implement event handler
+      
     });
 
     on<CategoriesEventAddCategory>((event, emit) async =>

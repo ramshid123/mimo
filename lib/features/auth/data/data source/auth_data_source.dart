@@ -41,7 +41,7 @@ class AuthDataSourceImpl implements AuthDataSource {
       await firestoreDB
           .collection(FirestoreCollections.users)
           .doc(
-              '${user.email}_${user.userId}_${Uuid().v1()}_${DateTime.now().millisecondsSinceEpoch}')
+              '${user.email}_${user.userId}_${const Uuid().v1()}_${DateTime.now().millisecondsSinceEpoch}')
           .set(user.toJson());
     } catch (e) {
       throw KustomException(e.toString());

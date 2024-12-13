@@ -18,8 +18,8 @@ class LoginPageWidgets {
             borderRadius: BorderRadius.circular(5),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFF000000).withOpacity(0.3),
-                offset: Offset(0, 0),
+                color: const Color(0xFF000000).withOpacity(0.3),
+                offset: const Offset(0, 0),
                 blurRadius: 8,
                 spreadRadius: 0,
               ),
@@ -61,7 +61,7 @@ class LoginPageWidgets {
 
   static Widget continueButton() {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 15),
+      padding: const EdgeInsets.symmetric(vertical: 15),
       width: double.infinity,
       decoration: BoxDecoration(
         color: ColorConstants.blue,

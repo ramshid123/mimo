@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mimo/core/theme/palette.dart';
 
 Widget kText({
   required String text,

@@ -8,7 +8,7 @@ Map<String, List<TaskEntity>> groupTasksByDateAndSort(List<TaskEntity> tasks) {
   // Get today's and tomorrow's dates for comparison
   final DateTime now = DateTime.now();
   final DateTime today = DateTime(now.year, now.month, now.day);
-  final DateTime tomorrow = today.add(Duration(days: 1));
+  final DateTime tomorrow = today.add(const Duration(days: 1));
 
   // Group tasks
   for (var task in tasks) {

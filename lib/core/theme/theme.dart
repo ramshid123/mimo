@@ -8,7 +8,7 @@ ThemeData lightTheme() {
       },
     ),
     brightness: Brightness.light,
-    scaffoldBackgroundColor: Color(0xffffffff),
+    scaffoldBackgroundColor: const Color(0xffffffff),
     textTheme: const TextTheme(bodyMedium: TextStyle(color: Color(0xff303244))),
     // Custom color defined here
     // extensions: <ThemeExtension<dynamic>>[
@@ -27,7 +27,7 @@ ThemeData darkTheme() {
       },
     ),
     brightness: Brightness.dark,
-    scaffoldBackgroundColor: Color(0xff2f3441),
+    scaffoldBackgroundColor: const Color(0xff2f3441),
     textTheme: const TextTheme(bodyMedium: TextStyle(color: Color(0xffffffff))),
     // extensions: <ThemeExtension<dynamic>>[
     //   CustomColors(

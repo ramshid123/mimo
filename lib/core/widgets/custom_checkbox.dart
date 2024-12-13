@@ -22,7 +22,7 @@ class CustomCheckBox extends StatefulWidget {
   final MouseCursor? mouseCursors;
 
   const CustomCheckBox({
-    Key? key,
+    super.key,
     required this.value,
     required this.onChanged,
     this.checkedIconColor = Colors.white,
@@ -40,7 +40,7 @@ class CustomCheckBox extends StatefulWidget {
     this.splashColor,
     this.tooltip,
     this.mouseCursors,
-  }) : super(key: key);
+  });
 
   @override
   _CustomCheckBoxState createState() => _CustomCheckBoxState();
@@ -91,7 +91,7 @@ class _CustomCheckBoxState extends State<CustomCheckBox> {
 
     return DottedBorder(
       borderType: BorderType.Circle,
-      dashPattern: [4, 0, 0],
+      dashPattern: const [4, 0, 0],
       strokeCap: StrokeCap.round,
       strokeWidth: 3,
       padding: EdgeInsets.zero,

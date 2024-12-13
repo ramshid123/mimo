@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -50,7 +49,7 @@ class TasksPageWidgets {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 5),
+            padding: const EdgeInsets.only(left: 5),
             child: kText(
               text: task.key,
               fontSize: 14,
@@ -106,7 +105,7 @@ class _AddTaskPopup extends StatefulWidget {
   final String categoryId;
   final String userId;
   const _AddTaskPopup(
-      {super.key, required this.categoryId, required this.userId});
+      {required this.categoryId, required this.userId});
 
   @override
   State<_AddTaskPopup> createState() => __AddTaskPopupState();
@@ -121,7 +120,7 @@ class __AddTaskPopupState extends State<_AddTaskPopup> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     super.initState();
   }
 
@@ -141,7 +140,7 @@ class __AddTaskPopupState extends State<_AddTaskPopup> {
               Material(
                 color: Colors.transparent,
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 40),
+                  margin: const EdgeInsets.symmetric(horizontal: 40),
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: BorderRadius.circular(5),
@@ -182,10 +181,10 @@ class __AddTaskPopupState extends State<_AddTaskPopup> {
                                       .color!
                                       .withOpacity(0.5),
                                 ),
-                                enabledBorder: OutlineInputBorder(
+                                enabledBorder: const OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                 ),
-                                focusedBorder: OutlineInputBorder(
+                                focusedBorder: const OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                 ),
                               ),
@@ -202,28 +201,26 @@ class __AddTaskPopupState extends State<_AddTaskPopup> {
                                   taskDate.value = date;
                                 }
                               },
-                              child: Container(
-                                child: ValueListenableBuilder(
-                                    valueListenable: taskDate,
-                                    builder: (context, _, __) {
-                                      return Row(
-                                        children: [
-                                          kText(
-                                            text:
-                                                DateFormat('EEEE, MMM dd, yyyy')
-                                                    .format(taskDate.value),
-                                            fontSize: 16,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                          const Spacer(),
-                                          Icon(
-                                            Icons.calendar_month,
-                                            size: 20,
-                                          ),
-                                        ],
-                                      );
-                                    }),
-                              ),
+                              child: ValueListenableBuilder(
+                                  valueListenable: taskDate,
+                                  builder: (context, _, __) {
+                                    return Row(
+                                      children: [
+                                        kText(
+                                          text:
+                                              DateFormat('EEEE, MMM dd, yyyy')
+                                                  .format(taskDate.value),
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        const Spacer(),
+                                        const Icon(
+                                          Icons.calendar_month,
+                                          size: 20,
+                                        ),
+                                      ],
+                                    );
+                                  }),
                             ),
                             kHeight(20),
                             ValueListenableBuilder(
@@ -245,7 +242,7 @@ class __AddTaskPopupState extends State<_AddTaskPopup> {
                                       },
                                       child: Container(
                                         padding:
-                                            EdgeInsets.symmetric(vertical: 10),
+                                            const EdgeInsets.symmetric(vertical: 10),
                                         decoration: BoxDecoration(
                                           color: ColorConstants.blue,
                                           borderRadius:
@@ -267,11 +264,11 @@ class __AddTaskPopupState extends State<_AddTaskPopup> {
                         ),
                       ),
                       Transform.translate(
-                        offset: Offset(10, -10),
+                        offset: const Offset(10, -10),
                         child: GestureDetector(
                           onTap: () => Navigator.pop(context),
                           child: Container(
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
                               color:
                                   Theme.of(context).textTheme.bodyMedium!.color,

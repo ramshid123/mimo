@@ -1,7 +1,7 @@
 import 'dart:developer';
 
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mimo/features/tasks/domain/use%20cases/get_tasks_count.dart';
 
 part 'tasks_count_state.dart';

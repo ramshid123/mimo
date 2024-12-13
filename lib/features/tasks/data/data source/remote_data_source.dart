@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:mimo/core/constants/collections.dart';
@@ -32,7 +31,7 @@ class TasksRemoteSourceImpl implements TasksRemoteSource {
       await firestoreDb
           .collection(FirestoreCollections.categories)
           .doc(
-              '${category.userId}_${category.categoryId}_${DateTime.now().millisecondsSinceEpoch}_${Uuid().v1()}')
+              '${category.userId}_${category.categoryId}_${DateTime.now().millisecondsSinceEpoch}_${const Uuid().v1()}')
           .set(category.toJson());
     } catch (e) {
       throw KustomException(e.toString());
@@ -45,7 +44,7 @@ class TasksRemoteSourceImpl implements TasksRemoteSource {
       await firestoreDb
           .collection(FirestoreCollections.tasks)
           .doc(
-              '${task.taskId}_${task.categoryId}_${task.userId}_${DateTime.now().millisecondsSinceEpoch}_${Uuid().v1()}')
+              '${task.taskId}_${task.categoryId}_${task.userId}_${DateTime.now().millisecondsSinceEpoch}_${const Uuid().v1()}')
           .set(task.toJson());
     } catch (e) {
       throw KustomException(e.toString());

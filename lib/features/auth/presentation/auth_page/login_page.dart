@@ -24,15 +24,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
 
   final actionIndex = ValueNotifier(0);
 
-  @override
-  void initState() {
-    super.initState();
-  }
 
-  @override
-  void dispose() {
-    super.dispose();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -75,7 +67,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                             children: [
                               Expanded(
                                 child: Padding(
-                                  padding: EdgeInsets.symmetric(horizontal: 40),
+                                  padding: const EdgeInsets.symmetric(horizontal: 40),
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.center,
@@ -151,7 +143,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            SignupPage())),
+                                                            const SignupPage())),
                                             child: Container(
                                               child: kText(
                                                 text: 'Register',
@@ -185,7 +177,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                             color: ColorConstants.blue.withOpacity(0.5),
                             child: Center(
                               child: Container(
-                                padding: EdgeInsets.all(20),
+                                padding: const EdgeInsets.all(20),
                                 height: 100,
                                 width: 100,
                                 decoration: BoxDecoration(

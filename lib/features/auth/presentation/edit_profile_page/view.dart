@@ -67,7 +67,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                         'https://cloud.appwrite.io/v1/storage/buckets/${dotenv.env['PROFILE_PIC_BUCKET_ID']}/files/${state.fileId}/view?project=${dotenv.env['APPWRITE_PROJECT_ID']}',
                     fileId: state.fileId)));
           }
-          // TODO: implement listener
+          
         },
         child: BlocBuilder<EditProfileCubit, EditProfileState>(
           builder: (context, state) {
@@ -86,13 +86,13 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             kHeight(20),
                             SafeArea(
                               child: Padding(
-                                padding: EdgeInsets.symmetric(horizontal: 20),
+                                padding: const EdgeInsets.symmetric(horizontal: 20),
                                 child: Row(
                                   children: [
                                     GestureDetector(
                                       onTap: () => Navigator.pop(context),
                                       child: Container(
-                                        padding: EdgeInsets.all(10),
+                                        padding: const EdgeInsets.all(10),
                                         decoration: BoxDecoration(
                                           color: Theme.of(context)
                                               .textTheme
@@ -101,7 +101,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                           borderRadius:
                                               BorderRadius.circular(15),
                                         ),
-                                        child: Icon(
+                                        child: const Icon(
                                           Icons.arrow_back,
                                           size: 25,
                                           color: ColorConstants.blue,
@@ -145,7 +145,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                 ],
                                 shape: BoxShape.circle,
                               ),
-                              child: Icon(
+                              child: const Icon(
                                 Icons.person_rounded,
                                 color: ColorConstants.blue,
                                 size: 70,
@@ -159,13 +159,13 @@ class _EditProfilePageState extends State<EditProfilePage> {
                             kHeight(30),
                             Expanded(
                               child: Container(
-                                padding: EdgeInsets.symmetric(horizontal: 25),
+                                padding: const EdgeInsets.symmetric(horizontal: 25),
                                 decoration: BoxDecoration(
                                   color: Theme.of(context)
                                       .textTheme
                                       .bodyMedium!
                                       .color,
-                                  borderRadius: BorderRadius.vertical(
+                                  borderRadius: const BorderRadius.vertical(
                                     top: Radius.circular(50),
                                   ),
                                 ),
@@ -213,7 +213,7 @@ class _EditProfilePageState extends State<EditProfilePage> {
                                 child: Align(
                                   alignment: Alignment.center,
                                   child: Container(
-                                    padding: EdgeInsets.all(20),
+                                    padding: const EdgeInsets.all(20),
                                     height: 100,
                                     width: 100,
                                     decoration: BoxDecoration(

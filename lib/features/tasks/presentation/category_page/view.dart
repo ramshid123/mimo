@@ -3,7 +3,6 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_layout_grid/flutter_layout_grid.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:mimo/core/entity/user_entity.dart';
 import 'package:mimo/core/global%20states/user%20state/bloc/user_bloc.dart';
 import 'package:mimo/core/theme/palette.dart';
@@ -24,7 +23,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     storedUserData =
         (context.read<UserBloc>().state as UserStateUserEntity).userEntity;
 
@@ -43,13 +42,13 @@ class _CategoriesPageState extends State<CategoriesPage> {
               .read<CategoriesBloc>()
               .add(CategoriesEventGetCategories(storedUserData.userId));
         }
-        // TODO: implement listener
+        
       },
       child: Scaffold(
         body: Column(
           children: [
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               color: Theme.of(context).scaffoldBackgroundColor,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,7 +60,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                       // context.read<UserBloc>().add(UserEventUserUpdate(userEntity))
                     },
                     child: Padding(
-                      padding: EdgeInsets.only(left: 10),
+                      padding: const EdgeInsets.only(left: 10),
                       child: BlocBuilder<UserBloc, UserState>(
                         builder: (context, state) {
                           String picUrl = storedUserData.profilePicUrl;
@@ -104,7 +103,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: Icon(
                       Icons.search,
@@ -117,7 +116,7 @@ class _CategoriesPageState extends State<CategoriesPage> {
             Expanded(
               child: SingleChildScrollView(
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 15),
+                  padding: const EdgeInsets.symmetric(horizontal: 15),
                   child: Column(
                     children: [
                       kHeight(40),
@@ -196,10 +195,10 @@ class _CategoriesPageState extends State<CategoriesPage> {
                                   );
                           } else if (state is CategoriesStateLoading) {
                             return Container(
-                              margin: EdgeInsets.only(top: 200),
+                              margin: const EdgeInsets.only(top: 200),
                               height: 40,
                               width: 40,
-                              child: CircularProgressIndicator(
+                              child: const CircularProgressIndicator(
                                 color: ColorConstants.blue,
                               ),
                             );

@@ -1,4 +1,4 @@
-import 'package:fpdart/src/either.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:mimo/core/error/kfailure.dart';
 import 'package:mimo/core/usecase/usecase.dart';
 import 'package:mimo/features/tasks/domain/repository/repository.dart';

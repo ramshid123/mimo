@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -15,14 +14,14 @@ class CategoriesPageWidget {
   static Widget quoteContainer() {
     return Builder(builder: (context) {
       return Container(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
         decoration: BoxDecoration(
           color: Theme.of(context).scaffoldBackgroundColor,
           borderRadius: BorderRadius.circular(5),
           boxShadow: [
             BoxShadow(
-              color: Color(0xFF000000).withOpacity(0.3),
-              offset: Offset(0, 0),
+              color: const Color(0xFF000000).withOpacity(0.3),
+              offset: const Offset(0, 0),
               blurRadius: 8,
               spreadRadius: 0,
             ),
@@ -84,14 +83,14 @@ class CategoriesPageWidget {
         );
       },
       child: Container(
-        padding: EdgeInsets.symmetric(vertical: 20),
+        padding: const EdgeInsets.symmetric(vertical: 20),
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(5),
           boxShadow: [
             BoxShadow(
-              color: Color(0xFF000000).withOpacity(0.3),
-              offset: Offset(0, 0),
+              color: const Color(0xFF000000).withOpacity(0.3),
+              offset: const Offset(0, 0),
               blurRadius: 8,
               spreadRadius: 0,
             ),
@@ -100,7 +99,7 @@ class CategoriesPageWidget {
         ),
         child: Center(
           child: Container(
-            padding: EdgeInsets.all(6),
+            padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
               color: Theme.of(context).textTheme.bodyMedium!.color,
               shape: BoxShape.circle,
@@ -138,9 +137,11 @@ class CategoriesPageWidget {
               MaterialPageRoute(
                   builder: (context) =>
                       TasksPage(categoryId: category.categoryId)));
-          context
-              .read<CategoriesBloc>()
-              .add(CategoriesEventGetCategories(category.userId));
+          if (context.mounted) {
+            context
+                .read<CategoriesBloc>()
+                .add(CategoriesEventGetCategories(category.userId));
+          }
         },
         child: Container(
           width: double.infinity,
@@ -149,8 +150,8 @@ class CategoriesPageWidget {
             borderRadius: BorderRadius.circular(5),
             boxShadow: [
               BoxShadow(
-                color: Color(0xFF000000).withOpacity(0.3),
-                offset: Offset(0, 0),
+                color: const Color(0xFF000000).withOpacity(0.3),
+                offset: const Offset(0, 0),
                 blurRadius: 8,
                 spreadRadius: 0,
               ),
@@ -159,7 +160,7 @@ class CategoriesPageWidget {
           child: Stack(
             children: [
               Padding(
-                padding: EdgeInsets.all(15),
+                padding: const EdgeInsets.all(15),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -183,7 +184,7 @@ class CategoriesPageWidget {
                   ],
                 ),
               ),
-              Align(
+              const Align(
                 alignment: Alignment.bottomRight,
                 child: Padding(
                   padding: EdgeInsets.only(right: 5, bottom: 5),
@@ -209,7 +210,7 @@ class CategoriesPageWidget {
 
 class _AddCategoryPopup extends StatefulWidget {
   final String userId;
-  _AddCategoryPopup({super.key, required this.userId});
+  const _AddCategoryPopup({required this.userId});
 
   @override
   State<_AddCategoryPopup> createState() => _AddCategoryPopupState();
@@ -240,7 +241,7 @@ class _AddCategoryPopupState extends State<_AddCategoryPopup> {
               Material(
                 color: Colors.transparent,
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 40),
+                  margin: const EdgeInsets.symmetric(horizontal: 40),
                   decoration: BoxDecoration(
                     color: Theme.of(context).scaffoldBackgroundColor,
                     borderRadius: BorderRadius.circular(5),
@@ -278,10 +279,10 @@ class _AddCategoryPopupState extends State<_AddCategoryPopup> {
                                   fontWeight: FontWeight.bold,
                                 ),
                                 filled: false,
-                                enabledBorder: OutlineInputBorder(
+                                enabledBorder: const OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                 ),
-                                focusedBorder: OutlineInputBorder(
+                                focusedBorder: const OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                 ),
                               ),
@@ -319,10 +320,10 @@ class _AddCategoryPopupState extends State<_AddCategoryPopup> {
                                   fontWeight: FontWeight.bold,
                                 ),
                                 filled: false,
-                                enabledBorder: OutlineInputBorder(
+                                enabledBorder: const OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                 ),
-                                focusedBorder: OutlineInputBorder(
+                                focusedBorder: const OutlineInputBorder(
                                   borderSide: BorderSide.none,
                                 ),
                               ),
@@ -354,8 +355,8 @@ class _AddCategoryPopupState extends State<_AddCategoryPopup> {
                                                 userId: widget.userId));
                                       },
                                       child: Container(
-                                        padding:
-                                            EdgeInsets.symmetric(vertical: 10),
+                                        padding: const EdgeInsets.symmetric(
+                                            vertical: 10),
                                         decoration: BoxDecoration(
                                           color: ColorConstants.blue,
                                           borderRadius:
@@ -378,11 +379,11 @@ class _AddCategoryPopupState extends State<_AddCategoryPopup> {
                         ),
                       ),
                       Transform.translate(
-                        offset: Offset(10, -10),
+                        offset: const Offset(10, -10),
                         child: GestureDetector(
                           onTap: () => Navigator.pop(context),
                           child: Container(
-                            padding: EdgeInsets.all(5),
+                            padding: const EdgeInsets.all(5),
                             decoration: BoxDecoration(
                               color:
                                   Theme.of(context).textTheme.bodyMedium!.color,

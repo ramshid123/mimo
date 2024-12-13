@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mimo/core/global%20states/user%20state/bloc/user_bloc.dart';
-import 'package:mimo/core/theme/palette.dart';
-import 'package:mimo/core/widgets/common.dart';
 import 'package:mimo/features/auth/presentation/auth_page/login_page.dart';
-import 'package:mimo/features/auth/presentation/settings_page/cubit/settings_cubit.dart';
 import 'package:mimo/features/auth/presentation/splash_screen/cubit/user_auth_cubit.dart';
 import 'package:mimo/features/tasks/presentation/category_page/view.dart';
 

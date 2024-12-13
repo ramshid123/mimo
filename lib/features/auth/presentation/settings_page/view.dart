@@ -1,14 +1,11 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:mimo/core/entity/user_entity.dart';
 import 'package:mimo/core/global%20states/user%20state/bloc/user_bloc.dart';
-import 'package:mimo/core/theme/palette.dart';
 import 'package:mimo/core/utils/show_toast.dart';
 import 'package:mimo/core/widgets/common.dart';
-import 'package:mimo/features/auth/presentation/edit_profile_page/view.dart';
 import 'package:mimo/features/auth/presentation/auth_page/login_page.dart';
 import 'package:mimo/features/auth/presentation/settings_page/cubit/profile_pic_cubit.dart';
 import 'package:mimo/features/auth/presentation/settings_page/cubit/settings_cubit.dart';
@@ -79,7 +76,7 @@ class _SettingsPageState extends State<SettingsPage> {
             userEntity = (context.read<UserBloc>().state as UserStateUserEntity)
                 .userEntity;
           }
-          // TODO: implement listener
+          
         },
         child: Scaffold(
           appBar: AppBar(
@@ -100,7 +97,7 @@ class _SettingsPageState extends State<SettingsPage> {
               }
 
               return Padding(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: SingleChildScrollView(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -159,7 +156,7 @@ class _SettingsPageState extends State<SettingsPage> {
                               storedUserData: userEntity,
                             ),
                             child: Container(
-                              padding: EdgeInsets.all(10),
+                              padding: const EdgeInsets.all(10),
                               decoration: BoxDecoration(
                                 color: Theme.of(context)
                                     .textTheme

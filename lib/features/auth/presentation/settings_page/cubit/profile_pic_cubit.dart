@@ -1,7 +1,8 @@
 import 'dart:developer';
 
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mimo/features/auth/domain/usecases/upload_profile_pic.dart';
 
 part 'profile_pic_state.dart';

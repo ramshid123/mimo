@@ -1,5 +1,4 @@
-import 'package:file_picker/file_picker.dart';
-import 'package:fpdart/src/either.dart';
+import 'package:fpdart/fpdart.dart';
 import 'package:mimo/core/error/exception.dart';
 import 'package:mimo/core/error/kfailure.dart';
 import 'package:mimo/features/auth/data/data%20source/storage_service.dart';

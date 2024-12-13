@@ -51,7 +51,7 @@ class _SignupPageState extends State<SignupPage> {
         body: Stack(
           children: [
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SingleChildScrollView(
                 child: SizedBox(
                   height: size.height,
@@ -69,11 +69,9 @@ class _SignupPageState extends State<SignupPage> {
                                       MaterialPageRoute(
                                           builder: (context) =>
                                               const LoginPage())),
-                              child: Container(
-                                child: Icon(
-                                  Icons.arrow_back,
-                                  size: 25,
-                                ),
+                              child: const Icon(
+                                Icons.arrow_back,
+                                size: 25,
                               ),
                             ),
                             kText(
@@ -81,7 +79,7 @@ class _SignupPageState extends State<SignupPage> {
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                             ),
-                            Opacity(
+                            const Opacity(
                               opacity: 0,
                               child: Icon(
                                 Icons.arrow_back,
@@ -92,7 +90,7 @@ class _SignupPageState extends State<SignupPage> {
                         ),
                         kHeight(25),
                         Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 30),
+                          padding: const EdgeInsets.symmetric(horizontal: 30),
                           child: Column(
                             children: [
                               LoginPageWidgets.loginForm(
@@ -139,7 +137,7 @@ class _SignupPageState extends State<SignupPage> {
                                     onTap: () => Navigator.pushReplacement(
                                         context,
                                         MaterialPageRoute(
-                                            builder: (context) => LoginPage())),
+                                            builder: (context) => const LoginPage())),
                                     child: Container(
                                       child: kText(
                                         text: 'Login',
@@ -170,7 +168,7 @@ class _SignupPageState extends State<SignupPage> {
                     color: ColorConstants.blue.withOpacity(0.5),
                     child: Center(
                       child: Container(
-                        padding: EdgeInsets.all(20),
+                        padding: const EdgeInsets.all(20),
                         height: 100,
                         width: 100,
                         decoration: BoxDecoration(

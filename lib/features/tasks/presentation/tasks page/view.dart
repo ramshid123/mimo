@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,7 +22,7 @@ class _TasksPageState extends State<TasksPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
+    
     storedUserData =
         (context.read<UserBloc>().state as UserStateUserEntity).userEntity;
     // storedUserData = UserEntity(
@@ -46,13 +45,13 @@ class _TasksPageState extends State<TasksPage> {
           Navigator.pop(context);
           context.read<TasksBloc>().add(TasksEventGetTasks(widget.categoryId));
         }
-        // TODO: implement listener
+        
       },
       child: Scaffold(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         floatingActionButton: FloatingActionButton(
           backgroundColor: Theme.of(context).textTheme.bodyMedium!.color,
-          shape: CircleBorder(),
+          shape: const CircleBorder(),
           child: Icon(
             Icons.add,
             size: 25,
@@ -79,7 +78,7 @@ class _TasksPageState extends State<TasksPage> {
             fontWeight: FontWeight.bold,
             color: Theme.of(context).textTheme.bodyMedium!.color,
           ),
-          actions: [
+          actions: const [
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Icon(
@@ -92,11 +91,11 @@ class _TasksPageState extends State<TasksPage> {
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         ),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: BlocBuilder<TasksBloc, TasksState>(
             builder: (context, state) {
               if (state is TasksStateTasks) {
-                return state.groupedTasks.length > 0
+                return state.groupedTasks.isNotEmpty
                     ? SingleChildScrollView(
                         child: Column(
                           children: [
@@ -119,7 +118,7 @@ class _TasksPageState extends State<TasksPage> {
                         ),
                       );
               } else if (state is TasksStateLoading) {
-                return Center(
+                return const Center(
                   child: SizedBox(
                     height: 40,
                     width: 40,
