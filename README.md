@@ -1,16 +1,24 @@
-# mimo
+# Mimo 📝
 
-A new Flutter project.
+Mimo is a simple todo application where the user can create reminders for the task ahead of them and classify them based on custom categories the users want.
 
-## Getting Started
+## Technologies Used 🛠️
+- **Frontend**: Flutter.
+- **Backend**: Firebase (for authentication and database) and Appwrite (for storage).
+- **Database**: Firestore.
 
-This project is a starting point for a Flutter application.
+## Getting Started ⚡
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ramshid123/mimo.git
+   cd mimo
 
-A few resources to get you started if this is your first Flutter project:
+2. Install dependencies
+   ```bash
+   flutter pub get
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. Run the app
+   ```bash
+   flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Made with ❤️ using Flutter.
