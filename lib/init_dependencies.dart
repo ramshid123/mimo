@@ -19,7 +19,6 @@ import 'package:mimo/features/auth/domain/usecases/signup.dart';
 import 'package:mimo/features/auth/domain/usecases/update_user_data.dart';
 import 'package:mimo/features/auth/domain/usecases/upload_profile_pic.dart';
 import 'package:mimo/features/auth/presentation/auth_page/bloc/login_bloc.dart';
-import 'package:mimo/features/auth/presentation/edit_profile_page/cubit/edit_profile_cubit.dart';
 import 'package:mimo/features/auth/presentation/settings_page/cubit/profile_pic_cubit.dart';
 import 'package:mimo/features/auth/presentation/settings_page/cubit/settings_cubit.dart';
 import 'package:mimo/features/auth/presentation/splash_screen/cubit/user_auth_cubit.dart';
@@ -109,8 +108,6 @@ void _initLearning() {
               useCaseLogout: serviceLocator(),
               useCaseUpdateUserData: serviceLocator(),
             ))
-        ..registerLazySingleton(
-            () => EditProfileCubit(useCaseUpdateUserData: serviceLocator()))
         ..registerLazySingleton(() => UserBloc())
         ..registerLazySingleton(() => LoginBloc(
               useCaseLogin: serviceLocator(),

@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mimo/core/global%20states/user%20state/bloc/user_bloc.dart';
 
 import 'package:mimo/core/theme/theme.dart';
-import 'package:mimo/features/auth/presentation/edit_profile_page/cubit/edit_profile_cubit.dart';
 import 'package:mimo/features/auth/presentation/auth_page/bloc/login_bloc.dart';
 import 'package:mimo/features/auth/presentation/settings_page/cubit/profile_pic_cubit.dart';
 import 'package:mimo/features/auth/presentation/settings_page/cubit/settings_cubit.dart';
@@ -46,7 +45,6 @@ class MyApp extends StatelessWidget {
         BlocProvider<LoginBloc>(create: (_) => serviceLocator()),
         BlocProvider<UserAuthCubit>(create: (_) => serviceLocator()),
         BlocProvider<SettingsCubit>(create: (_) => serviceLocator()),
-        BlocProvider<EditProfileCubit>(create: (_) => serviceLocator()),
         BlocProvider<UserBloc>(create: (_) => serviceLocator()),
         BlocProvider<CategoriesBloc>(create: (_) => serviceLocator()),
         BlocProvider<TasksBloc>(create: (_) => serviceLocator()),
